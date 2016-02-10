@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+
+<head>
+  <title>Red Team Buzzword Detector</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="node_modules/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href=".node_modules/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="node_modules/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly.min.css">
+  <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly-additions.min.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-datatables/dist/angular-datatables.min.js"></script>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="js/3.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a id="logo" class="navbar-brand" href="/" style="font-size: 36px">Red Team Buzzword Detector</a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+    <!-- <ul class="nav navbar-nav navbar-utility">
+        <li>
+          <a href="#">Status</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="pficon pficon-user"></span> Brian Johnson <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Link</a>
+            </li>
+            <li>
+              <a href="#">Another link</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a tabindex="-1" href="#">More options</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Another link</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">One more separated link</a>
+            </li>
+          </ul>
+        </li>
+      </ul> -->
+    <ul class="nav navbar-nav navbar-primary">
+      <li class="active">
+        <a href="index.html" class="active">Table</a>
+      </li>
+      <li>
+        <a href="pie.html">Charts</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li>Table</li>
+        </ol>
+
+        <div ng-app="myApp">
+
+          <div ng-controller="WordsCtrl as ctrl">
+            <table datatable="" dt-options="ctrl.dtOptions" dt-columns="ctrl.dtColumns" class="row-border hover datatable table table-striped table-bordered"></table>
+          </div>
+        </div>
+
+      </div>
+      <!-- /col -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</body>
+
+</html>
