@@ -1,3 +1,7 @@
 function first() {
-	console.log("Goodbye World!");
+	console.log("Hello redhat");
 };
+
+function hello() {
+	alert("Hello World!");
+}

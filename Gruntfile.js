@@ -21,6 +21,7 @@ module.exports = function(grunt) {
 		console.log("Hello");
 	});
 	
+	grunt.loadNpmTasks('grunt-debug-task');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
