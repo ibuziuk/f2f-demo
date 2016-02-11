@@ -15,6 +15,11 @@ module.exports = function(grunt) {
 			    },
 			  },
 			},
+			serve: {
+				options: {
+					port: 9000
+				}
+			},
 	});
 	
 	grunt.registerTask("log", function() {
@@ -24,5 +29,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-debug-task');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-
+	grunt.loadNpmTasks('grunt-serve');
 };

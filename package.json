@@ -27,6 +27,7 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "*",
     "grunt-debug-task" : "*",
+    "grunt-serve" : "*",
     "node-inspector" : "*", 
     "gulp": "^3.9.1",
     "gulp-connect": "^2.3.1",
